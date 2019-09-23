@@ -80,7 +80,7 @@ class Projector(object):
         # protocol. Don't take this as any kind of assurance that it's secure.
 
         data = protocol.read(self.f, 9, self.encoding)
-        assert data[:7] == 'PJLINK ' or data[:7] == b'pjlink '
+        assert data[:7] == 'PJLINK ' or data[:7] == 'pjlink '
         security = data[7]
         if security == '0':
             return None
