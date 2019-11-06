@@ -33,10 +33,12 @@ SOURCE_TYPES_REV = reverse_dict(SOURCE_TYPES)
 MUTE_VIDEO = 1
 MUTE_AUDIO = 2
 MUTE_STATES_REV = {
+    '10': (False, False),
     '11': (True, False),
+    '20': (False, False),
     '21': (False, True),
-    '31': (True, True),
     '30': (False, False),
+    '31': (True, True),
 }
 
 ERROR_STATES_REV = {
