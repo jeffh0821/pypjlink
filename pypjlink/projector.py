@@ -82,11 +82,7 @@ class Projector(object):
         # protocol. Don't take this as any kind of assurance that it's secure.
 
         data = protocol.read(self.f, 9, self.encoding)
-<<<<<<< HEAD
-        assert data[:7] == 'PJLINK '
-=======
         assert data.upper()[:7] == 'PJLINK '
->>>>>>> allow lowercase response
         security = data[7]
         if security == '0':
             return None
